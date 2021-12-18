@@ -5,24 +5,26 @@
 
 ## ⛳ 목표까지의 로드맵
 
-무작위 숫자 받아오기
-사용자 숫자 받아오기
-ㄴ 잘못된 입력:
-  ㄴ 다른 문자 입력: 입력값이 잘못되었습니다. 숫자로만 입력해주세요.
-  ㄴ 중복된 숫자 입력: 중복된 숫자가 있습니다. 다시 입력해주세요.
-ㄴ 조건충족:
-  ㄴ 무작위 숫자 & 사용자 숫자 비교하기
-    ㄴ 불일치:
-      ㄴ 볼, 스트라이크, 낫싱 상태 표시
-    ㄴ 일치:
-      ㄴ 정답 알림 및 재시도 버튼 활성화
+- 무작위 숫자 받아오기
+- 사용자 숫자 받아오기
+  - 잘못된 입력:
+    - 다른 문자 입력: 입력값이 잘못되었습니다. 숫자로만 입력해주세요.
+    - 중복된 숫자 입력: 중복된 숫자가 있습니다. 다시 입력해주세요.
+  - 조건충족:
+    - 무작위 숫자 & 사용자 숫자 비교하기
+      - 불일치: 볼, 스트라이크, 낫싱 상태 표시
+      - 일치: 정답 알림 및 재시도 버튼 활성화
 
-numbers-utils.js: 사용자 및 컴퓨터의 숫자 받아오기
-ㄴ alert-utils.js: 조건에 맞지 않다면 그에 대한 알람과 재입력 요구.
-ㄴ game-utils.js: 조건에 맞아 받아온 숫자를 바탕으로 정답, 오답 판정
-  ㄴ paint-utils.js: 
-    ㄴ 오답: 볼, 스트라이크, 낫싱 상태 표시
-    ㄴ 정답: 정답 알림 및 재시도 버튼(game-restart-button) 보여주기
+```
+- numbers-utils.js: 사용자 및 컴퓨터의 숫자 받아오기
+  - alert-utils.js: 조건에 맞지 않다면 그에 대한 알람과 재입력 요구.
+- game-utils.js: 조건에 맞아 받아온 숫자를 바탕으로 정답, 오답 판정
+  - paint-utils.js: 
+    - 오답: 볼, 스트라이크, 낫싱 상태 표시
+    - 정답: 정답 알림 및 재시도 버튼(game-restart-button) 보여주기
+```
+
+<br><hr><br>
 
 ## 🎯 기능 요구사항
 
@@ -38,14 +40,15 @@ numbers-utils.js: 사용자 및 컴퓨터의 숫자 받아오기
 - 게임을 종료한 후 id가 `game-restart-button`인 버튼을 클릭함으로써 게임을 다시 시작할 수 있다.
   - `예) <button id="game-restart-button">재시작</button>`
 
-<br>
+
+<br><hr><br>
 
 ## 💻 프로그래밍 실행 결과
 
 ![baseball_result_gif](https://github.com/woowacourse/javascript-baseball-precourse/blob/main/images/result.gif?raw=true)
 ![baseball_result_jpg](https://github.com/woowacourse/javascript-baseball-precourse/blob/main/images/result.jpg?raw=true)
 
-<br>
+<br><hr><br>
 
 ## ✅ 프로그래밍 요구사항
 
@@ -88,7 +91,7 @@ play(123, 124); // '2스트라이크'
   - 힌트: indent(인덴트, 들여쓰기) depth를 줄이는 좋은 방법은 함수(또는 메소드)를 분리하면 된다.
 - **함수(또는 메소드)가 한 가지 일만 하도록 최대한 작게** 만들어라.
 
-<br>
+<br><hr><br>
 
 ## 📝 미션 저장소 및 진행 요구사항
 
@@ -97,7 +100,7 @@ play(123, 124); // '2스트라이크'
 - **git의 commit 단위는 앞 단계에서 README.md 파일에 정리한 기능 목록 단위로 추가**한다.
 - [프리코스 과제 제출](https://github.com/woowacourse/woowacourse-docs/tree/master/precourse) 문서 절차를 따라 미션을 제출한다.
 
-<br>
+<br><hr><br>
 
 ## 🔗 참고 링크
 
