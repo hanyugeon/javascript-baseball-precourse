@@ -17,7 +17,7 @@ function shuffleArr(arr) {
   return arr;
 }
 
-export function getRandomNumArr(arr) { 
+export function getRandomNum(arr) { 
   const shuffledArr = shuffleArr(baseArr);
 
   for (let i = 0; i < arrSize; i++) {
@@ -27,34 +27,47 @@ export function getRandomNumArr(arr) {
 
 function checkLengthOfNum(num) {
   if (num.length != arrSize) {
+    alert(ALERT_MSG.INPUT_VALIDATE_LENGTH_ERROR);
     return false;
   }
 }
 
 function checkTypeOfNum(num) {
-  const checkType = /\d/;
+  const str = num.replace(/[^0-9]/g, '');
 
-  if (!checkType.test(num)) {
+  if (num.length != str.length) {
+    alert(ALERT_MSG.INPUT_VALIDATE_TYPE_ERROR);
     return false;
   }
 }
 
-function checkDuplicateNum(num) {
-  if (num.lastIndexOf(num[0]) != 0) {
+function checkZeroInNum(num) {
+  if (num.indexOf(0) != -1) {
+    alert(ALERT_MSG.INPUT_VALIDATE_INCLUDE_ZERO_ERROR);
     return false;
   }
+}
 
-  if (num.indexOf(num[arrSize - 1]) != arrSize - 1) {
+function checkDuplicatedNum(num) {
+  if (num.lastIndexOf(num[0]) != 0) {
+    alert(ALERT_MSG.INPUT_VALIDATE_OVERLAP_ERROR);
+    return false;
+  } else if (num.indexOf(num[arrSize - 1]) != arrSize - 1) {
+    alert(ALERT_MSG.INPUT_VALIDATE_OVERLAP_ERROR);
     return false;
   }
 }
 
 export function checkUserNum(userNum) {
   if (checkLengthOfNum(userNum) == false) {
-    alert(ALERT_MSG.INPUT_VALIDATE_LENGTH_ERROR);
+    return false;
   } else if (checkTypeOfNum(userNum) == false) {
-    alert(ALERT_MSG.INPUT_VALIDATE_TYPE_ERROR);
-  } else if (checkDuplicateNum(userNum) == false) {
-    alert(ALERT_MSG.INPUT_VALIDATE_OVERLAP_ERROR);
+    return false;
+  } else if (checkZeroInNum(userNum) == false) {
+    return false;
+  } else if (checkDuplicatedNum(userNum) == false) {
+    return false;
   }
+
+  return true;
 }
